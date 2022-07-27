@@ -34,6 +34,11 @@ class Cards extends React.Component {
                 <Card.Text onClick={this.handleShow}>
                   {this.props.description }
                 </Card.Text>
+
+                <Card.Text onClick={this.handleShow}>
+                 Number of Horns: {this.props.horns }
+                </Card.Text>
+                
                 <Button variant="primary" onClick={this.handleLike}>❤ {this.state.likes}</Button>
                 <Button variant="primary" onClick={this.handleDisLike}>👎{this.state.disLikes}</Button>
               </Card.Body>

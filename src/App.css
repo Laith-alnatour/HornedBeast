@@ -59,3 +59,23 @@
   background-color: antiquewhite;
 }
 
+.userInput input{
+
+  background: #044d72;
+  margin: 1%;
+  border-radius: 10px;
+  color: #FFF;
+  }
+.userInput select{
+  background-color: #61dafb;
+  background:transparent;
+  height:32px;
+  border:1px solid #d8d8d8;
+  border: 0 !important; 
+  background: #0088cc  no-repeat 90% center;
+   color: #FFF;
+  border-radius: 15px;
+  padding: 5px;
+  box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
+  width:12%;
+}

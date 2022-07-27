@@ -4,9 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 
 class Example extends React.Component {
 
-    openModal = () => {
-        this.props.handleShow();
-      }
+   
       closeModal = () => {
         this.props.handleClose();
       }

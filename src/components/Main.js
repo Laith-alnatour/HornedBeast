@@ -6,6 +6,7 @@ import beast2  from "../images/Bison .jpg";
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
+
 let horned1 = require('./data.json');
 
 let mythicalBeasts = [
@@ -47,19 +48,31 @@ class Main extends React.Component {
 
       }
       render() {
-          console.log(this.state.value);
+
           
           return (
               <div> 
-                <input type="text" placeholder="Search title or horns no." onChange={(e)=>this.findHorned(e)} />
+     <div className="userInput">
+                    <form onChange={this.findHorned}>
+                        <input type="text" placeholder="Search by title or horns number" />
+                        <select id="hornsNum">
+                        <option value=''>Choose number of horns </option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="100">More than 3</option>
+                    </select>
+                </form>
+                </div>
                 <>
             <Row xs={1} sm={2} md={3} className="g-4">
+      
                 {
                     (((horned2.filter(beastInfo => (beastInfo.horns == this.state.value)) !='')? horned2.filter(beastInfo => beastInfo.horns == this.state.value):
                     horned2.filter(beastInfo => (beastInfo.title.toLowerCase().includes(this.state.value.toLowerCase())) !=[])? horned2.filter(beastInfo =>beastInfo.title.toLowerCase().includes(this.state.value.toLowerCase())):
                      horned2)).map( beast => 
                         <Col key={beast._id}>
-                <Cards id={beast._id} title={beast.title} image_url={beast.image_url} description={beast.description} />
+                <Cards id={beast._id} title={beast.title} image_url={beast.image_url} description={beast.description} horns={beast.horns} />
             </Col>
             )
             }

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import Cards from "./HornedBeast";
 import beast1  from "../images/Rhino.jpg";
